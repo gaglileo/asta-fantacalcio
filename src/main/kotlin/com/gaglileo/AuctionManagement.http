@@ -1,0 +1,17 @@
+###
+POST http://127.0.0.1:8080/auctions
+Content-Type: text/plain
+
+KOUAME
+
+###
+DELETE http://127.0.0.1:8080/auctions/
+
+###
+POST http://127.0.0.1:8080/auctions/assign
+
+###
+POST http://127.0.0.1:8080/player/add/
+
+###
+POST http://127.0.0.1:8080/player/sub/
