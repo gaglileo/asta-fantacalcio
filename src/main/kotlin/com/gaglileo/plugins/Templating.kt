@@ -11,5 +11,5 @@ fun Application.configureTemplating() {
         templateLoader = ClassTemplateLoader(this::class.java.classLoader, "templates")
         outputFormat = HTMLOutputFormat.INSTANCE
     }
-    routing {  }
+    routing { }
 }

@@ -51,23 +51,6 @@
         <h1>In attesa di chiamata</h1>
     </#if>
 </div>
-<table class="center">
-    <tr>
-        <th><button onclick="location.href='/offer/new/0'"  type="button">LEO</button></th>
-        <th><button onclick="location.href='/offer/new/1'"  type="button">TRUCIDO</button></th>
-    </tr>
-    <tr>
-        <th><button onclick="location.href='/offer/new/2'"  type="button">FULVIO</button></th>
-        <th><button onclick="location.href='/offer/new/3'"  type="button">MAZZA</button></th>
-    </tr>
-    <tr>
-        <th><button onclick="location.href='/offer/new/4'"  type="button">MAGNA</button></th>
-        <th><button onclick="location.href='/offer/new/5'"  type="button">REGINA</button></th>
-    </tr>
-    <tr>
-        <th><button onclick="location.href='/offer/new/6'"  type="button">MIMI</button></th>
-        <th><button onclick="location.href='/offer/new/7'"  type="button">MIRCO</button></th>
-    </tr>
-</table>
+
 </body>
 </html>

@@ -22,24 +22,29 @@ fun Application.configureRouting() {
         get("/") {
             call.respondRedirect("auctions")
         }
-        route("auctions"){
+        route("auctions") {
             get {
-                call.respond(FreeMarkerContent("index.ftl",
-                    mapOf(
-                        "auctions" to fantaSession.auctions,
-                        "players" to fantaSession.players,
-                        "currentAuction" to fantaSession.currentAuction
+                call.respond(
+                    FreeMarkerContent(
+                        "index.ftl",
+                        mapOf(
+                            "auctions" to fantaSession.auctions,
+                            "players" to fantaSession.players,
+                            "currentAuction" to fantaSession.currentAuction
+                        )
                     )
-                ))
+                )
             }
             get("{id}") {
                 val auctionId = call.parameters["id"]?.toInt()!!
                 val auction = fantaSession.getAuction(auctionId)
-                call.respond(FreeMarkerContent("auction.ftl",
-                    mapOf(
-                        "auction" to auction
+                call.respond(
+                    FreeMarkerContent(
+                        "auction.ftl",
+                        mapOf(
+                            "auction" to auction
+                        )
                     )
-                )
                 )
             }
             post {
@@ -60,11 +65,15 @@ fun Application.configureRouting() {
         route("offer") {
             get("new/{playerId}") {
                 val playerId = call.parameters["playerId"]
-                call.respond(FreeMarkerContent("offer.ftl", model =
-                mapOf(
-                    "currentAuction" to fantaSession.currentAuction,
-                    "playerId" to playerId
-                )))
+                call.respond(
+                    FreeMarkerContent(
+                        "offer.ftl", model =
+                        mapOf(
+                            "currentAuction" to fantaSession.currentAuction,
+                            "playerId" to playerId
+                        )
+                    )
+                )
             }
             post("{playerId}") {
                 val playerId = call.parameters["playerId"]?.toInt()!!
@@ -80,14 +89,14 @@ fun Application.configureRouting() {
                 val playerId = call.parameters["playerId"]?.toInt()!!
                 val amount = call.parameters["playerId"]?.toInt()!!
                 players.first { it.id == playerId }.apply {
-                    money+=amount
+                    money += amount
                 }
             }
             post("sub/{playerId}/{amount}") {
                 val playerId = call.parameters["playerId"]?.toInt()!!
                 val amount = call.parameters["playerId"]?.toInt()!!
                 players.first { it.id == playerId }.apply {
-                    money-=amount
+                    money -= amount
                 }
             }
         }
