@@ -14,6 +14,7 @@
         }
     </style>
     <title>Asta FantaSaracena</title>
+    <meta http-equiv="refresh" content="5">
 </head>
 <body style="text-align: center; font-family: sans-serif">
 <h3>Asta FantaSaracena</h3>
