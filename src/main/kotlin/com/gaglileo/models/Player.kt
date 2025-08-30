@@ -20,12 +20,12 @@ private constructor(val id: Int, val name: String, var money: Int) {
 }
 
 val players = listOf(
-    Player.newEntry(0,"Leo", 224),
-    Player.newEntry(1,"Trucido", 128),
-    Player.newEntry(2,"Fabio", 158),
-    Player.newEntry(3,"Mazza", 129),
-    Player.newEntry(4,"Magna", 266),
-    Player.newEntry(5,"Regina", 207),
-    Player.newEntry(6,"Mimi", 131),
-    Player.newEntry(7,"Mirco", 138),
+    Player.newEntry(0,"Leo", 500),
+    Player.newEntry(1,"Trucido", 500),
+    Player.newEntry(2,"Fabio", 500),
+    Player.newEntry(3,"Mazza", 500),
+    Player.newEntry(4,"Magna", 500),
+    Player.newEntry(5,"Regina", 500),
+    Player.newEntry(6,"Mimi", 500),
+    Player.newEntry(7,"Mirco", 500),
 )
