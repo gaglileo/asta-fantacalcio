@@ -50,4 +50,6 @@ private constructor(
     fun getOffersList(): List<Offer> {
         return offers.values.toList()
     }
+
+    fun isNotCompleted() = !isCompleted
 }
